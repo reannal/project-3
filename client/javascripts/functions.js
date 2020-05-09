@@ -20,32 +20,57 @@ let bitBatBotOrNot = (n) => {
    }
    if(n % 7 == 0){
      result = `${result}Bot`;
-   }
-   if(n % 3,7,9 !== 0){
-     result = `${result}Not`;
-   }
+    }
+  if (n % 3 !== 0 && n % 5 !== 0 && n % 7 !== 0 ) {
+    result = `${result}Not`;
+  }
   return result;
 };
 
-let findAllbitBatBotOrNots1 = (arr) => {
-   //your code goes here
-   //use map method
-};
-
 let findAllbitBatBotOrNots2 = (arr) => {
-   //your code goes here
-   //use for statement
+  let forArray = [];
+  for (var i = 0; i < arr.length ; i++) {
+    forArray1 = `${arr}: ${bitBatBotOrNot(arr)}`;
+    forArray.push(forArray1);
+    //result = result + bitBatBotOrNot(arr[i]);
+  }
+  return forArray;
 };
 
-let findAllbitBatBotOrNots3 = (arr) => {
-   //your code goes here
-   //use for..of statement
-};
 
-let findAllbitBatBotOrNots4 = (arr) => {
-   //your code goes here
-   //use forEach method
-};
+let findAllbitBatBotOrNots1 = (arr) => {
+  mapArray = [];
+  arr.map(elem => {
+    elemMap = `${elem}: ${bitBatBotOrNot(elem)}`;
+    mapArray =  mapArray + "\"" + elemMap + "\"" + ", ";
+   });
+   return mapArray;
+ };
+
+
+
+
+ let findAllbitBatBotOrNots3 = (arr) => {
+   forofArray = [];
+   let array = [];
+   for (const arr of array){
+     forofArray1 = `${arr}: ${bitBatBotOrNot(arr)}`;
+     forofArray.push(forofArray1);
+     //forofArray = forofArray + "\"" + forofArray1 + "\"" + ", ";
+   }
+   return forofArray;
+ };
+
+ let findAllbitBatBotOrNots4 = (arr) => {
+   forEachArray = [];
+   let array = [9, 10, 28, 30, 34, 105];
+   array.forEach((arr) => {
+     forEachArray1 = `${arr}: ${bitBatBotOrNot(arr)}`;
+     forEachArray.push(forEachArray1);
+   });
+   return forEachArray;
+ };
+
 
 //test the functions
 
